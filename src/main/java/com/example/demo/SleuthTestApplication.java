@@ -13,9 +13,9 @@ public class SleuthTestApplication {
   SubscribableChannel inputChannel() {
     return new DirectChannel();
   }
-  
-	public static void main(String[] args) {
-		SpringApplication.run(SleuthTestApplication.class, args);
-	}
-	
+
+  public static void main(String[] args) {
+    SpringApplication.run(SleuthTestApplication.class, args);
+  }
+
 }
