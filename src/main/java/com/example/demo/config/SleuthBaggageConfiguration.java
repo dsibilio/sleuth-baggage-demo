@@ -23,7 +23,6 @@ public class SleuthBaggageConfiguration {
 
   public SleuthBaggageConfiguration(SleuthBaggageProperties baggageProperties) {
     this.baggageProperties = baggageProperties;
-
   }
 
   @Bean
