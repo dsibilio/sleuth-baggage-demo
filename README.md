@@ -6,7 +6,7 @@ You can interrogate an HTTP demo endpoint that will automatically insert the `ht
 
 `curl -H "http-custom-header: http sleuth baggage" http://localhost:8080/demo`
 
-The underlying REST Controller will in turn send a Spring Integration message to a channel, triggering the insertion of all `spring.sleuth.baggage.local-fields` that can be found in the message headers as MDC key-value pairs.
+The underlying REST Controller will in turn send a Spring Integration message to a channel, triggering the insertion of all `spring.sleuth.baggage.local-fields` that can be found in the message headers, and are also marked as `correlation-fields`, as MDC key-value pairs.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
