@@ -31,6 +31,7 @@ public class DemoController {
 
   @ServiceActivator(inputChannel = "inputChannel")
   public void eventEndpoint(Message<String> message) {
+    message.getHeaders().forEach((key, value) -> LOG.info("Message Headers: {} => {}", key, value));
     MDC.getCopyOfContextMap().forEach((key, value) -> LOG.info("Event MDC: {} => {}", key, value));
   }
 

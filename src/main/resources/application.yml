@@ -3,9 +3,9 @@ spring:
     sampler:
       probability: 1.0
     baggage:
-      local-fields:        - event-custom-header
       remote-fields:
         - http-custom-header
+        - event-custom-header
       correlation-fields:
         - http-custom-header
         - event-custom-header
